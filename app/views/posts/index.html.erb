@@ -1,0 +1,39 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Posts</h1>
+
+
+
+<section>
+<% @posts.each do |post| %>
+    <div>
+      <h4>  <%= post.title %> </h4>
+      <small> <%= post.category %>  </small>
+      <br>
+      <b> <%= post.author %>  </b>
+      <br>
+      Dated Created: <%= post.created_at %> 
+      <br>
+      <%= image_tag post.image_url, alt: 'post img' %>
+      <br>
+      <p><%= post.content %> </p>
+      <p>
+      <%= link_to "Show this post", post %>
+    </p>
+    </div>
+  <%end%>
+</section>
+
+
+<!-- 
+Old verison showing a post 
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post %>
+    </p>
+  <% end %>
+</div>
+-->
+<%= link_to "New post", new_post_path %>

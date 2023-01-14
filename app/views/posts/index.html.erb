@@ -3,7 +3,7 @@
   <h1>Posts</h1>
 </div>
 
-
+<%= link_to "New post", new_post_path ,class:"button" %>
 
 
 <section>
@@ -32,15 +32,3 @@
 </section>
 
 
-<!-- 
-Old verison showing a post 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
--->
-<%= link_to "New post", new_post_path %>

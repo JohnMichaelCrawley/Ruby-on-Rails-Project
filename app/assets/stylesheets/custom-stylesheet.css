@@ -4,6 +4,22 @@ body
 }
 
 
+.button 
+{
+    display: block;
+    width: 200px;
+    height: 50px;
+    background: #4E9CAF;
+    text-decoration: none;
+    padding: 11px;
+    text-align: center;
+    color: white;
+    line-height: 25px;
+    margin-bottom: 2%;
+    margin: 0 auto;
+
+}
+
 /* Header */ 
 .header 
 {

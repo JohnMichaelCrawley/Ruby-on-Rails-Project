@@ -1,0 +1,31 @@
+<div class="row">
+
+    <!--LOGIN-->
+    <!--
+    <div class="col-6">
+        <form action="/sessions" method="POST">
+            <h4>Login</h4>
+            <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+            <input type="username" name="login[name]" placeholder="Username"> 
+            <br><br>
+            <input type="password" name="login[password_digest]" placeholder="password">  
+            <br><br>
+            <input type="submit" name="submit" value="Login" class="btn btn-primary">
+         </form>
+    </div>
+-->
+
+
+    <!--REGISTER-->
+    <div class="col-6">
+    <form action="/users" method="POST">
+        <h4>Register</h4>
+        <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+        <input type="username" name="login[name]" placeholder="Username"> 
+        <br><br>
+        <input type="password" name="login[password_digest]" placeholder="password">  
+        <br><br>
+        <input type="submit" name="submit" value="Register" class="btn btn-primary">
+     </form>
+</div>
+</div>

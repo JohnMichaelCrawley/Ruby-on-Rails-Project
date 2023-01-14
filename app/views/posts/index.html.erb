@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
+<div class="text-center">
+  <h1>Posts</h1>
+</div>
 
-<h1>Posts</h1>
 
 
 
@@ -11,8 +13,13 @@
       <small> <%= post.category %>  </small>
       <br>
       <b> <%= post.author %>  </b>
-      <br>
-      Dated Created: <%= post.created_at %> 
+      <%= 
+      require 'date'
+      date = Date.parse("Sun, 15 Sep 2013") # => #<Date: 2013-09-15 ((2456551j,0s,0n),+0s,2299161j)>
+      date.strftime("%a, %d %b %Y") # => "Sun, 15 Sep 2013"
+      post.created_at.strftime("%a, %d %b %Y") # => "Sun, 15 Sep 2013"
+      
+      %> 
       <br>
       <%= image_tag post.image_url, alt: 'post img', class: "img-fluid" %>
       <br>
